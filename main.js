@@ -26,3 +26,24 @@ Definisci una funzione chiamata quadrato che accetta un numero e restituisce il 
 
 const quadrato = (num) => num * num
 console.log(quadrato(3))
+
+/*🏆 Snack 3
+Crea una funzione eseguiOperazione
+Definisci una funzione eseguiOperazione che accetta tre parametri: 
+due numeri e una funzione operatore (callback). 
+La funzione deve eseguire l'operazione fornita sui due numeri.*/
+
+function eseguiOperazione(a, b, operazione) {
+    return operazione(a, b)
+}
+
+const addizione = (a, b) => a + b
+const moltiplicazione = (a, b) => a * b
+const divisione = (a, b) => a / b
+const sottrazione = (a, b) => a - b
+
+console.log(eseguiOperazione(5, 5, addizione))
+console.log(eseguiOperazione(5, 5, moltiplicazione))
+console.log(eseguiOperazione(5, 5, divisione))
+console.log(eseguiOperazione(5, 5, sottrazione))
+
