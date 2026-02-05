@@ -6,17 +6,23 @@ Quindi, riscrivi la funzione somma con la sintassi delle arrow functions.*/
 
 /*
 function somma(a, b) {
-    console.log(a + b)
+    return a + b
 }
-somma(3, 4)
+console.log(somma(3, 4))
 */
 /*
 const somma = function (a, b) {
-    console.log(a + b)
+    return a + b
 }
-
-somma(4, 7)
+console.log(somma(4, 7))
 */
 
-const somma = (a, b) => { console.log(a + b) }
-somma(5, 5)
+const somma = (a, b) => a + b
+console.log(somma(5, 5))
+
+/*🏆 Snack 2
+Crea una arrow function che calcola il quadrato di un numero.
+Definisci una funzione chiamata quadrato che accetta un numero e restituisce il suo quadrato in una sola riga.*/
+
+const quadrato = (num) => num * num
+console.log(quadrato(3))
