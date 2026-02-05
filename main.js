@@ -47,3 +47,17 @@ console.log(eseguiOperazione(5, 5, moltiplicazione))
 console.log(eseguiOperazione(5, 5, divisione))
 console.log(eseguiOperazione(5, 5, sottrazione))
 
+/*🏆 Snack 4
+Crea un generatore di funzioni creaTimer
+Scrivi una funzione creaTimer che accetta un tempo (in ms) e restituisce una nuova funzione
+che avvia un setTimeout per stampare "Tempo scaduto!".*/
+
+function creaTimer(tempo) {
+    return function () {
+        setTimeout(() => {
+            console.log('Tempo scaduto!');
+        }, tempo);
+    };
+}
+const timer = creaTimer(3000)
+timer()
