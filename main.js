@@ -80,3 +80,25 @@ setTimeout(() => {
     clearInterval(intervallo)
     console.log('Stampa conclusa.')
 }, 5000);
+
+/*🏆 Snack 6
+Crea un contatore automatico con setInterval
+Definisci una funzione creaContatoreAutomatico che accetta un intervallo di tempo
+e restituisce una funzione che avvia un setInterval, 
+incrementando un contatore e stampandolo.*/
+let contatore = 0
+
+function creaContatoreAutomatico(tempo) {
+    return function () {
+        const id = setInterval(() => {
+            console.log(contatore++)
+        }, tempo)
+        return id
+    }
+}
+const tempo = creaContatoreAutomatico(1000)
+const interval = tempo()
+
+setTimeout(() => {
+    clearInterval(interval)
+}, 11000)
